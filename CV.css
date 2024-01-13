@@ -1,0 +1,226 @@
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(60, 60, 60);
+}
+
+.header{
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 97%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(74, 74, 74);
+}
+
+.text1{
+    font-size: 25px;
+    color: white;
+}
+
+.img1{
+    width: 200px;
+    height: 200px;
+    margin-top: 80px;
+    border-radius: 100%;
+}
+
+.bt1{
+    font-size: 20px;
+    color: white;
+    background-color: rgb(101, 101, 101);
+    padding: 20px;
+    border: 2px;
+    margin: 2px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.links{
+    margin-top: 84px;
+    position: fixed;
+    background-color: #404040;
+    padding: 50px;
+    height: 100%;
+    width: 50%;
+    z-index: 1;
+    display: none;
+    text-align: center;
+    display: none;
+}
+
+.linksa{
+    display: grid;
+}
+
+.l1{
+    border-radius: 30px;
+    color: #ffffff;
+    margin-top: 15px;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #4d4d4d;
+}
+
+.bt2{
+    margin-top: 20px;
+    border-radius: 30px;
+    height: 500%;
+}
+
+#hiddenElement {
+    opacity: 1;
+    transform: translateX(-100%);
+    animation: popIn 0.5s ease-in-out forwards;
+  }
+
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.section{
+    padding: 20px;
+}
+
+.part2{
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.card1{
+    display: grid;
+    place-items: center;
+}
+
+.text2{
+    margin-top: 20px;
+    color: white;
+    font-size: 25px;
+}
+
+.card{
+    position: relative;
+    height: 400px;
+    width: 290px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.front-face, .back-face{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,2), rgba(0,0,0, .2)), url("https://codetheworld.io/wp-content/uploads/2024/01/bg.jpg");
+    color: white;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform .7s cubic-bezier(.4, .2, .2, .1);
+}
+
+.contents{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    perspective: 100px;
+    transform: translateY(-50%) translateZ(60px) scale(.94);
+}
+
+.back-face{
+    transform: rotateY(180deg);
+}
+.front p{
+    font-size: 28px;
+    margin: 0;
+}
+
+.front span{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.front p.bottom-bar::after{
+    content: '';
+    display: block;
+    background: white;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 150px;
+    margin-inline: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.front-face{
+    transform: rotateY(-180deg);    
+}
+
+.back-face{
+    transform: rotateY(0deg);
+    background: linear-gradient(45deg, #0e0e0e 0%, #5a5a5a 100%);
+}
+
+.back h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.back span{
+    font-weight: 300;
+    font-size: 12px;
+}
+.icons{
+    margin: 10px 0;
+}
+
+.icons i{
+    height: 40px;
+    width: 40px;
+    background: white;
+    color: #042f4b;
+    font-size: 20px;
+    border-radius: 50%;
+    line-height: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.front-face{
+    transform: rotateY(0deg);
+}
+
+.back-face{
+    transform: rotateY(180deg);
+}
+
+.card:hover>.front-face{
+    transform: rotateY(-180deg);
+}
+
+.card:hover>.back-face{
+    transform: rotateY(0deg);
+}

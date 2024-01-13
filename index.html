@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CV.css" rel="stylesheet">
+    <title>CV</title>
+</head>
+<body>
+    <div class="part1">
+        <div class="header">
+            <a class="text1">
+                CV
+            </a>
+            <button class="bt1" id="showButton" onclick="toggleVisibility()"></button>
+        </div>
+        <div class="links" id="hiddenElement">
+            <div class="linksa">
+              <a href="#" class="l1">Qualifications</a>
+              <a href="#" class="l1">Experience</a>
+              <button class="bt2" onclick="downloadFile()">Download my nigga for more info</button>
+            </div>
+        </div>
+    </div>
+    <div class="part2">
+        <div class="section">
+            <img class="img1" class="img1" src="imga1.jpg">
+            <div class="text2">
+            <a class="text22">
+                John Doe
+123 Main Street
+Cityville, State 12345
+Email: john.doe@email.com
+Phone: (555) 123-4567
+LinkedIn: linkedin.com/in/johndoe
+
+Objective:
+A highly motivated and results-driven software engineer with a strong background in web development. Seeking an opportunity to contribute my skills and expertise to an innovative tech company where I can continue to grow professionally.
+
+Education:
+Bachelor of Science in Computer Science
+XYZ University, Cityville, State
+September 2016 - May 2020
+
+Relevant Courses:
+- Web Development
+- Database Management
+- Algorithms and Data Structures
+
+Work Experience:
+Software Developer
+Tech Solutions Inc., Cityville, State
+June 2020 - Present
+- Collaborated with a cross-functional team to design and implement user-friendly web applications.
+- Utilized HTML, CSS, JavaScript, and React to develop responsive and dynamic front-end interfaces.
+- Integrated RESTful APIs to fetch and display data, enhancing overall user experience.
+
+Intern, Software Engineering
+ABC Tech Co., Citytown, State
+May 2019 - August 2019
+- Assisted in the development and testing of software modules for a cloud-based application.
+- Participated in code reviews and provided feedback on code quality and best practices.
+- Worked closely with senior developers to troubleshoot and resolve software defects.
+
+Skills:
+- Programming Languages: JavaScript, HTML, CSS, Python
+- Front-End Technologies: React, Angular
+- Database: MySQL, MongoDB
+- Version Control: Git
+- Problem Solving and Analytical Skills
+
+Projects:
+E-commerce Website
+- Developed a fully functional e-commerce website using React and Node.js.
+- Implemented user authentication, product catalog, and shopping cart functionality.
+
+Personal Finance Tracker App
+- Designed and built a personal finance tracker using Angular and Firebase.
+- Integrated charts and graphs to visualize spending patterns.
+
+Certifications:
+- React Developer Certificate (XYZ Tech Academy)
+- Web Development Professional Certificate (Online Course Platform)
+
+Achievements:
+- Awarded "Outstanding Student in Computer Science" in recognition of academic achievements.
+
+References:
+Available upon request.
+
+            </a>
+        </div>
+    </div>
+    <div class="card1">
+    <div class="card">
+        <div class="front-face">
+            <div class="contents front">
+                <p>Sunteti nefori</p>
+                <p class="bottom-bar"></p>
+                <span>Nu uita sa faci download ca are hackuri</span>
+            </div>
+        </div>
+        <div class="back-face">
+            <div class="contents back">
+                <h2>Dati fallow nefori</h2>
+                <span>Uitete jos</span>
+                <div class="icons">
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    function toggleVisibility() {
+  var element = document.getElementById("hiddenElement");
+
+  
+  if (element.style.display === "none" || getComputedStyle(element).display === "none") {
+    element.style.display = "block";
+  } else {
+    element.style.display = "none";
+  }
+
+  
+  var visibilityState = element.style.display === "none" ? "hidden" : "visible";
+  history.replaceState({}, document.title, "?visibility=" + visibilityState);
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var params = new URLSearchParams(window.location.search);
+  var visibility = params.get("visibility");
+
+  if (visibility === "hidden") {
+    var element = document.getElementById("hiddenElement");
+    element.style.display = "none";
+  }
+});
+
+function downloadFile() {
+        const fileContent = "Artiom = MONKEY -_-";
+        const blob = new Blob([fileContent], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = window.URL.createObjectURL(blob);
+        a.download = 'secret info.txt';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
+
+</html>
